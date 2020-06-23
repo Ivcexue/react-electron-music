@@ -1,0 +1,130 @@
+@import './common.scss';
+
+.icon-common {
+  width: 30px;
+  text-align: center;
+  border: radius 50px;
+  font-size: 15px;
+  color: #000000;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  background: #FCFCFC;
+  padding: $pt-1;
+  box-sizing: border-box;
+  padding-left: 230px;
+  font-size: $font-size;
+
+  .right-left {
+    width: 60px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .icon-direction {
+      @extend .icon-common;
+
+      &:hover {
+        background: #eeeeee;
+        border-radius: 50px;
+      }
+    }
+  }
+
+  .active {
+    color: #000000;
+    font-weight: 550;
+  }
+
+  .song-sheet {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: $ml-2;
+    li {
+      color: #333333;
+
+      &:hover {
+        @extend .active;
+      }
+    }
+  }
+
+  .search-container {
+    width: 220px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 50px;
+    overflow: hidden;
+    background: #eeeeee;
+    margin-left: $ml-3;
+    padding-left: $pl-1;
+    display: flex;
+    align-items: center;
+    input {
+      width: 80%;
+      height: 100%;
+      background: none;
+      border: none;
+      outline: none;
+    }
+  }
+
+  .icon-huanfu {
+    margin-left: $ml-3;
+    font-size: 20px;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50px;
+    @extend .icon-common;
+
+    &:hover {
+      background: #eeeeee;
+    }
+  }
+
+  .theme-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .theme-select {
+      margin-right: $mr-1;
+      .theme-item {
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        border: 1px solid #cccccc;
+        border-radius: 50px;
+        background: #FCFCFC;
+        .icon-duihao {
+          font-size: 13px;
+        }
+      }
+
+      .theme-text {
+        display: block;
+        margin-top: 5px;
+        width: 25px;
+      }
+    }
+  }
+  .light-colour {
+    @include theme();
+  }
+  .red-colour {
+    @include theme($color: #FCFCFC, $bg-color: #C20C0C)
+  }
+  .dark-colour {
+    @include theme($color: #FCFCFC, $bg-color: #000000)
+  }
+  .auto-colour {
+    @include theme()
+  }
+
+}

@@ -1,0 +1,30 @@
+@import './reset.scss';
+@import './base.scss';
+
+// padding
+$pt-1:10px;
+$pt-2:20px;
+$pr-1:10px;
+$pr-2:20px;
+$pb-1:10px;
+$pb-2:20px;
+$pl-1:10px;
+$pl-2:20px;
+$pl-3:30px;
+// margin
+$mt-1: 10px;
+$mt-2: 20px;
+$mr-1: 10px;
+$mr-2: 20px;
+$mb-1: 10px;
+$mb-2: 20px;
+$ml-1: 10px;
+$ml-2: 20px;
+$ml-3: 30px;
+
+$font-size: 13px;
+
+@mixin theme($color: #C20C0C, $bg-color:#FCFCFC) {
+  color: $color !important;
+  background: $bg-color !important;
+}
